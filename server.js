@@ -7,6 +7,7 @@ import { createAdapter } from "@socket.io/redis-adapter";
 
 const app = express();
 const server = createServer(app);
+app.get("/", (req, res) => res.send("Server is alive!"));
 
 const localDomains = [process.env.WEB_URL];
 
